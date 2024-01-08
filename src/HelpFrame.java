@@ -4,26 +4,16 @@ import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JFrame;
 import javax.imageio.*;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
+import javax.swing.*;
 
-
-
-
-/**
- * Klasa HelpFrame.
- */
 public class HelpFrame extends JFrame implements ActionListener {
 
 
 
     /** Przycisk powrotu do glownego menu. */
     JButton powrot;
-    JLabel instrukcja;
+    JTextArea textArea;
 
     /**
      * Konstruktor klasy HelpFrame.
@@ -31,43 +21,49 @@ public class HelpFrame extends JFrame implements ActionListener {
     public HelpFrame() {
         setBounds(0, 0, 1280, 1024);
         setResizable(false);
-        setTitle("Matematyczny koszyk");
+        setTitle("Matematyczny koszyk - HELP");
         this.setLayout(null);
 
         try {
-            setContentPane(new JLabel(new ImageIcon(ImageIO.read(new File("src/pliki/tlo.png")))));
+            setContentPane(new JLabel(new ImageIcon(ImageIO.read(new File("src/pliki/tlo8.png")))));
         }
         catch(Exception e) {
             e.printStackTrace();
         }
 
-
-        instrukcja = new JLabel("<HTML><body style='text-align:justify;background-color:ccf5ff; color:black;'Siema");
-        instrukcja.setLayout(new GridLayout(0, 1));
-        instrukcja.setBounds(340, 150, 600, 500);
-        instrukcja.setFont(new Font("Times New Roman", Font.BOLD, 30));
-        this.add(instrukcja);
+        textArea = new JTextArea(" Gra polega na tym, że na środku ekranu są przedstawione 3 tory. " +
+                "Na dole ekranu będzie stał koszyk, do " +
+                "którego będą doprowadzone tory. Na koszyku ukazane będzie działanie (warunek), które bedzie " +
+                "zmieniane w trakcie gry. Z góry będą spadać liczby. Zadaniem gracza będzie łapanie liczb spełniających " +
+                "warunek na koszyku. Jeżeli liczba spełniająca warunek nie zostanie złapana to gracz traci życie. Po " +
+                "utracie 3 żyć gracz przegrywa. Gracz wygrywa grę, jeśli uda mu się poprawnie odpowiedzieć na 5 pytań.");
+        textArea.setLineWrap(true);
+        textArea.setWrapStyleWord(true);
+        textArea.setEditable(false);
+        textArea.setBackground(new Color(0, 0, 0, 0));
+        textArea.setLayout(new GridLayout(0,1));
+        textArea.setBounds(340, 150, 600, 500);
+        textArea.setFont(new Font("Times New Roman", Font.BOLD, 30));
+        textArea.setForeground(Color.BLACK);
+        this.add(textArea);
 
 
         ImageIcon buttonBack = new ImageIcon("src/pliki/buttonback.png");
         powrot = new JButton("", buttonBack);
-        powrot.setBounds(525, 700, 235, 50);
+        powrot.setBounds(525, 700, 241, 75);
         powrot.setBackground(Color.white);
         powrot.setOpaque(false);
         powrot.setBorderPainted(false);
         powrot.setContentAreaFilled(false);
         powrot.addActionListener(this);
         this.add(powrot);
-
     }
-
 
     @Override
     public void actionPerformed(ActionEvent e) {
 
         int x = this.getLocationOnScreen().x;
         int y = this.getLocationOnScreen().y;
-
 
 
         if(e.getSource() == powrot) {
@@ -78,9 +74,6 @@ public class HelpFrame extends JFrame implements ActionListener {
             main.setVisible(true);
             main.setBounds(x, y, 1280, 1024);
             this.dispose();
-
-
         }
-
     }
 }

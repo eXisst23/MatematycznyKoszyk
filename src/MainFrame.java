@@ -16,15 +16,15 @@ public class MainFrame extends JFrame implements ActionListener {
     JButton exit;
 
     JButton result;
+    private ActionEvent e;
 
     public MainFrame() {
 
         setBounds(0,0,1280,1024);
+        setSize(1280, 1024);
         setResizable(false);
         setTitle("Matematyczny koszyk");
         this.setLayout(null);
-
-
 
 
         try {
@@ -47,9 +47,10 @@ public class MainFrame extends JFrame implements ActionListener {
         play = new JButton("", buttonPlay);
         play.setBounds(56, 573, 250, 180);
         play.setBackground(Color.white);
-        play.setOpaque(false);
-        play.setBorderPainted(false);
+        play.setOpaque(false);                              /** Ustawia przezroczystość */
+        play.setBorderPainted(false);                       /** Usuwa Obramowanie */
         play.setContentAreaFilled(false);
+        play.addActionListener(this);
         this.add(play);
 
 
@@ -60,6 +61,7 @@ public class MainFrame extends JFrame implements ActionListener {
         result.setOpaque(false);
         result.setBorderPainted(false);
         result.setContentAreaFilled(false);
+        result.addActionListener(this);
         this.add(result);
 
 
@@ -81,20 +83,8 @@ public class MainFrame extends JFrame implements ActionListener {
         exit.setOpaque(false);
         exit.setBorderPainted(false);
         exit.setContentAreaFilled(false);
+        exit.addActionListener(this);
         this.add(exit);
-
-
-
-
-
-
-        /*title = new JLabel("Matematyczny koszyk");
-        title.setFont(new Font("Arial"), Font.PLAIN,14);
-        title.setBounds(140, 100, 1000, 280);
-        this.add(title);*/
-
-
-
     }
 
     @Override
@@ -112,9 +102,35 @@ public class MainFrame extends JFrame implements ActionListener {
             help.setBounds(x, y, 1280, 1024);
             this.dispose();
         }
+        else if(e.getSource() == result) {
+
+            ResultsFrame results = new ResultsFrame();
+            results.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            results.setAlwaysOnTop(true);
+            results.setVisible(true);
+            results.setBounds(x, y, 1280, 1024);
+            this.dispose();
+
+        }else if(e.getSource() == play){
+
+            GameFrame game = new GameFrame();
+//            String imagePath = "src/pliki/tlo2.png";
+//            JPanel panel = new ImageBackGroundPanel("src/pliki/tlo2.png");
+//            game.getContentPane().add(panel);
+            game.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            game.setSize(1280, 1024);
+            game.setAlwaysOnTop(true);
+            game.pack();
+            game.setVisible(true);
+            game.setBounds(x, y, 1280, 1024);
+            this.dispose();
+
+        }
+        else if(e.getSource() == exit){
+            System.exit(0);
+        }
         else {
             this.dispose();
         }
     }
-
 }
