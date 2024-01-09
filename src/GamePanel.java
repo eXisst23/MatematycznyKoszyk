@@ -9,6 +9,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+/**
+ * Klasa odpowiedzialna za logike gry
+ */
+
 public class GamePanel extends JPanel implements Runnable{
 
     Thread gameThread;

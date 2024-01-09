@@ -7,6 +7,10 @@ import java.io.File;
 import javax.imageio.*;
 import javax.swing.*;
 
+/**
+ * Klasa opisująca wygląd i zawartośc okna HelpFrame
+ */
+
 public class HelpFrame extends JFrame implements ActionListener {
 
 
