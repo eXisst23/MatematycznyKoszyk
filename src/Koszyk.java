@@ -5,12 +5,18 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.Objects;
 
-
+/**
+ * Klasa Opisująca poruszający sie koszyk
+ */
 public class Koszyk extends ObiektGry {
 
     KeyHandler keyH;
     private int speed;
     boolean pauza;
+
+    /**
+     * Konstruktor klasy Koszyk.
+     */
 
     public Koszyk(GamePanel gp, KeyHandler keyH) {
 

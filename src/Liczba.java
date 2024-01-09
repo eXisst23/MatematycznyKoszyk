@@ -1,10 +1,18 @@
 import java.awt.*;
 
+/**
+ * Klasa liczba opisuje spdadające liczby
+ */
+
 public class Liczba extends ObiektGry {
 
     private int wartosc;
     private boolean czyZebrana;
     private Font font;
+
+    /**
+     * Konstruktor klasy Liczba.
+     */
 
     public Liczba(Pozycja pozycja, GamePanel gp, int wartosc) {
         super(pozycja, gp);

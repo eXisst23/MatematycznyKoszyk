@@ -1,4 +1,12 @@
+/**
+ * Klasa WarunekPodzielnosciPrzezTrzy
+ */
+
 public class WarunekPodzielnosciPrzezTrzy extends Warunek {
+
+    /**
+     * Konstruktor klasy WarunekPodzielnosciPrzezTrzy.
+     */
 
     public WarunekPodzielnosciPrzezTrzy(GamePanel gamePanel) {
         super(gamePanel);

@@ -1,7 +1,16 @@
+
+/**
+ * Klasa pozycja daje informacje o pozycjach obiektów
+ */
+
 public class Pozycja {
 
     private int x;
     private int y;
+
+    /**
+     * Konstruktor klasy Pozycja.
+     */
 
     public Pozycja(int x, int y) {
         this.x = x;

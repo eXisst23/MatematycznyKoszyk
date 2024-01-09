@@ -1,4 +1,12 @@
+/**
+ * Klasa WarunekNieparzystosci sprawdza czy liczba zapana przez koszyk jest nieparzysta
+ */
+
 public class WarunekNieparzystosci extends Warunek {
+
+    /**
+     * Konstruktor klasy WarunekNieparzystości.
+     */
 
     public WarunekNieparzystosci(GamePanel gamePanel) {
         super(gamePanel);

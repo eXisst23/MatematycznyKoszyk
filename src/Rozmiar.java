@@ -1,7 +1,15 @@
+/**
+ * Rozmiar moowi o rozmiarze obiektów
+ */
+
 public class Rozmiar {
 
     private  int wysokosc;
     private int szerokosc;
+
+    /**
+     * Konstruktor klasy Rozmiar.
+     */
 
     public Rozmiar(int wysokosc, int szerokosc) {
         this.wysokosc = wysokosc;

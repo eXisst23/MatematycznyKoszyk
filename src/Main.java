@@ -1,9 +1,16 @@
 import javax.swing.*;
 import java.awt.*;
 
-
+/**
+ * Klasa głowna.
+ */
 
 public class Main {
+
+    /**
+     * Konstruktor klasy Main.
+     */
+
     public static void main(String[] args) {
 
         MainFrame frame =  new MainFrame();

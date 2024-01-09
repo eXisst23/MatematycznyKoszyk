@@ -3,6 +3,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+/**
+ * Klasa zajmuująca się tworzeniem, generowaniem liczb
+ */
+
 public abstract class MenagerLiczb {
 
     protected List<Liczba> liczby;

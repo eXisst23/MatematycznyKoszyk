@@ -1,6 +1,8 @@
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-
+/**
+ * Klasa do obsługi przycisków.
+ */
 public class KeyHandler implements KeyListener {
 
     public boolean leftPressed;

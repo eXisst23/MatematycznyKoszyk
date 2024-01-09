@@ -5,12 +5,20 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 
+/**
+ * Klasa obsługi menu.
+ */
+
 public class MainFrame extends JFrame implements ActionListener {
 
     JLabel title;
     JButton play;
     JButton help;
     JButton exit;
+
+    /**
+     * Konstruktor klasy Main Frame.
+     */
 
     public MainFrame() {
 

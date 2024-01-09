@@ -1,10 +1,18 @@
 import java.awt.*;
 
+/**
+ * Klasa warunek sprawdaz czy warunki są spełnione
+ */
+
 public abstract class Warunek {
 
     protected String nazwa;
     private Font font;
     private GamePanel gamePanel;
+
+    /**
+     * Konstruktor klasy Warunek.
+     */
 
     public Warunek(GamePanel gamePanel) {
         this.gamePanel = gamePanel;

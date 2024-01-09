@@ -7,6 +7,10 @@ import java.io.File;
 
 public class GameFrame extends JFrame {
     GamePanel gamePanel;
+
+    /**
+     * Konstruktor klasy Game Frame.
+     */
     public GameFrame() {
 
         setTitle("Matematyczny koszyk - Gra");

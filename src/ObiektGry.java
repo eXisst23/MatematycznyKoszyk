@@ -2,12 +2,20 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
 
+/**
+ * Abstrakcyjna klasa opisująca obiekty
+ */
+
 public abstract class ObiektGry {
 
     private Pozycja pozycja;
     private Rozmiar rozmiar;
     private Image obraz;
     private GamePanel gp;
+
+    /**
+     * Konstruktor klasy ObiektGry.
+     */
 
     public ObiektGry(Pozycja pozycja, Rozmiar rozmiar, GamePanel gp) {
         this.pozycja = pozycja;

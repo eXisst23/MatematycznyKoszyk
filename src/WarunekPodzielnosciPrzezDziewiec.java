@@ -1,4 +1,12 @@
+/**
+ * Klasa WarunekPodzielnosciprzezdziewiec sprawdza czy liczby zlapane przez koszyk sa podzielne przez 9
+ */
+
 public class WarunekPodzielnosciPrzezDziewiec extends Warunek {
+
+    /**
+     * Konstruktor klasy WarunekPodzielnosciPrzezDziewiec.
+     */
 
     public WarunekPodzielnosciPrzezDziewiec(GamePanel gamePanel) {
         super(gamePanel);

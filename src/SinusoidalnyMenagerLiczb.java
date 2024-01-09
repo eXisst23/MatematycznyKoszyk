@@ -1,4 +1,12 @@
+/**
+ * Klasa tworzy sinusoidalny przebieg po którym spadaja liczby
+ */
+
 public class SinusoidalnyMenagerLiczb extends MenagerLiczb {
+
+    /**
+     * Konstruktor klasy SinusoidalnyMenagerLiczb.
+     */
 
     public SinusoidalnyMenagerLiczb(Pozycja pozycja, GamePanel gp) {
         super(pozycja, gp);

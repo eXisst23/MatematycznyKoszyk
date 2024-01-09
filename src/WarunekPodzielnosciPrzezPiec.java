@@ -1,4 +1,12 @@
+/**
+ * Klasa WarunekPodzielnosciPrzezPiec sprawdza czy liczby zlapane przez koszyk sa podzielne przez piec
+ */
+
 public class WarunekPodzielnosciPrzezPiec extends Warunek {
+
+    /**
+     * Konstruktor klasy WarunekPodzielnosciPrzezPiec.
+     */
 
     public WarunekPodzielnosciPrzezPiec(GamePanel gamePanel) {
         super(gamePanel);

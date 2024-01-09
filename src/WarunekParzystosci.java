@@ -1,4 +1,12 @@
+/**
+ * Klasa WarunekParzystosci sprawdza czy liczby zlapane przez koszyk sa parzyste
+ */
+
 public class WarunekParzystosci extends Warunek {
+
+    /**
+     * Konstruktor klasy WarunekParzystości.
+     */
 
     public WarunekParzystosci(GamePanel gamePanel) {
         super(gamePanel);
