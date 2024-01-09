@@ -4,7 +4,6 @@ public class Liczba extends ObiektGry {
 
     private int wartosc;
     private boolean czyZebrana;
-
     private Font font;
 
     public Liczba(Pozycja pozycja, GamePanel gp, int wartosc) {

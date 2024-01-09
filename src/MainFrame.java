@@ -14,7 +14,6 @@ public class MainFrame extends JFrame implements ActionListener {
 
     public MainFrame() {
 
-        setBounds(0,0,1280,1024);
         setSize(1280, 1024);
         setResizable(false);
         setTitle("Matematyczny koszyk");
@@ -77,6 +76,7 @@ public class MainFrame extends JFrame implements ActionListener {
         if(e.getSource() == help) {
 
             HelpFrame help = new HelpFrame();
+            help.setSize(1280, 1024);
             help.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             help.setAlwaysOnTop(true);
             help.setVisible(true);
@@ -86,9 +86,6 @@ public class MainFrame extends JFrame implements ActionListener {
         }else if(e.getSource() == play){
 
             GameFrame game = new GameFrame();
-//            String imagePath = "src/pliki/tlo2.png";
-//            JPanel panel = new ImageBackGroundPanel("src/pliki/tlo2.png");
-//            game.getContentPane().add(panel);
             game.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             game.setSize(1280, 1024);
             game.setAlwaysOnTop(true);

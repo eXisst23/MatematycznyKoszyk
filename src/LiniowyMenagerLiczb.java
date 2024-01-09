@@ -1,4 +1,5 @@
 public class LiniowyMenagerLiczb extends MenagerLiczb {
+    
     public LiniowyMenagerLiczb(Pozycja pozycja, GamePanel gp) {
         super(pozycja, gp);
     }

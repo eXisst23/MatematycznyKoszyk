@@ -10,13 +10,6 @@ public class GameFrame extends JFrame {
     public GameFrame() {
 
         setTitle("Matematyczny koszyk - Gra");
-
-//        try {
-//            setContentPane(new JLabel(new ImageIcon(ImageIO.read(new File("src/pliki/tlo2.png")))));
-//        }
-//        catch(Exception e) {
-//            e.printStackTrace();
-//        }
         this.gamePanel = new GamePanel(this);
         this.setSize(new Dimension(1280,1024));
         add(gamePanel, BorderLayout.CENTER);

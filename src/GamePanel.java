@@ -14,18 +14,13 @@ public class GamePanel extends JPanel implements Runnable{
     Thread gameThread;
     KeyHandler keyH = new KeyHandler();
     Koszyk koszyk = new Koszyk(this, keyH);
-
     Random random = new Random();
     Ziemia ziemia;
     int FPS = 60;
     GameFrame gameFrame;
-
     List<MenagerLiczb> menageryLiczb;
-
     Warunek aktywnyWarunek;
-
     List<Warunek> warunki;
-
     private Font font;
     int punkty;
     int zycia;

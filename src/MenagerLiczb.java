@@ -10,6 +10,7 @@ public abstract class MenagerLiczb {
     private int licznik;
     private Random rand;
     private GamePanel gp;
+
     public MenagerLiczb(Pozycja pozycja, GamePanel gp) {
         this.pozycjaStartowa = pozycja;
         this.liczby = new ArrayList<>();
@@ -41,5 +42,4 @@ public abstract class MenagerLiczb {
             stworzLiczbe();
         }
     }
-
 }

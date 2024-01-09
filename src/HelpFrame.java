@@ -31,12 +31,11 @@ public class HelpFrame extends JFrame implements ActionListener {
             e.printStackTrace();
         }
 
-        textArea = new JTextArea(" Gra polega na tym, że na środku ekranu są przedstawione 3 tory. " +
-                "Na dole ekranu będzie stał koszyk, do " +
-                "którego będą doprowadzone tory. Na koszyku ukazane będzie działanie (warunek), które bedzie " +
-                "zmieniane w trakcie gry. Z góry będą spadać liczby. Zadaniem gracza będzie łapanie liczb spełniających " +
-                "warunek na koszyku. Jeżeli liczba spełniająca warunek nie zostanie złapana to gracz traci życie. Po " +
-                "utracie 3 żyć gracz przegrywa. Gracz wygrywa grę, jeśli uda mu się poprawnie odpowiedzieć na 5 pytań.");
+        textArea = new JTextArea(" Gra polega na tym, że na środku ekranu są przedstawione 2 tory. " +
+                "Na dole ekranu będzie stał koszyk." + " Na dole ekranu bedzie ukazany warunek, który bedzie " +
+                "zmieniany w trakcie gry. Z góry będą spadać liczby. Zadaniem gracza będzie łapanie liczb spełniających " +
+                "warunek. Jeżeli liczba spełniająca warunek nie zostanie złapana to gracz traci życie. Po " +
+                "utracie 3 żyć gracz przegrywa.\n - jeżeli chcesz zatrzymać gre wciśnij P \n - jeżeli chcesz wznowić gre wciśnij O \n - jeżeli chcesz wrócić do menu wciśnij I");
         textArea.setLineWrap(true);
         textArea.setWrapStyleWord(true);
         textArea.setEditable(false);

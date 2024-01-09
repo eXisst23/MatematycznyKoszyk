@@ -3,10 +3,10 @@ import java.awt.*;
 import java.awt.event.ActionListener;
 
 public abstract class ObiektGry {
+
     private Pozycja pozycja;
     private Rozmiar rozmiar;
     private Image obraz;
-
     private GamePanel gp;
 
     public ObiektGry(Pozycja pozycja, Rozmiar rozmiar, GamePanel gp) {
@@ -50,10 +50,6 @@ public abstract class ObiektGry {
 
     public GamePanel getGp() {
         return gp;
-    }
-
-    public void setGp(GamePanel gp) {
-        this.gp = gp;
     }
 
     public Boolean czyKolizja(ObiektGry innyObiekt) {

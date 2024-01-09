@@ -7,9 +7,9 @@ import java.util.Objects;
 
 
 public class Koszyk extends ObiektGry {
+
     KeyHandler keyH;
     private int speed;
-
     boolean pauza;
 
     public Koszyk(GamePanel gp, KeyHandler keyH) {
@@ -31,7 +31,6 @@ public class Koszyk extends ObiektGry {
         }
     }
 
-
     public void update() {
 
         if(keyH.leftPressed){
@@ -41,8 +40,8 @@ public class Koszyk extends ObiektGry {
             if (getPozycja().getX() + speed + getRozmiar().getSzerokosc() < getGp().getWidth() ) getPozycja().setX(getPozycja().getX() + speed);
         }
     }
+
     public void draw(Graphics2D g2){
         g2.drawImage(getObraz(), getPozycja().getX(), getPozycja().getY(), getRozmiar().getSzerokosc(), getRozmiar().getWysokosc(), null);
     }
-
 }
