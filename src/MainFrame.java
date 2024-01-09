@@ -8,15 +8,9 @@ import java.io.File;
 public class MainFrame extends JFrame implements ActionListener {
 
     JLabel title;
-
     JButton play;
-
     JButton help;
-
     JButton exit;
-
-    JButton result;
-    private ActionEvent e;
 
     public MainFrame() {
 
@@ -35,8 +29,6 @@ public class MainFrame extends JFrame implements ActionListener {
         }
 
 
-
-
         ImageIcon labelTitle = new ImageIcon("src/pliki/MATEMATYCZNY.png");
         title = new JLabel(labelTitle);
         title.setBounds(140, 100, 1000, 280);
@@ -45,7 +37,7 @@ public class MainFrame extends JFrame implements ActionListener {
 
         ImageIcon buttonPlay = new ImageIcon("src/pliki/graj.png");
         play = new JButton("", buttonPlay);
-        play.setBounds(56, 573, 250, 180);
+        play.setBounds(200, 575, 250, 180);
         play.setBackground(Color.white);
         play.setOpaque(false);                              /** Ustawia przezroczystość */
         play.setBorderPainted(false);                       /** Usuwa Obramowanie */
@@ -54,20 +46,9 @@ public class MainFrame extends JFrame implements ActionListener {
         this.add(play);
 
 
-        ImageIcon buttonResult = new ImageIcon("src/pliki/wyniki.png");
-        result = new JButton("", buttonResult);
-        result.setBounds(362, 573, 250, 180);
-        result.setBackground(Color.WHITE);
-        result.setOpaque(false);
-        result.setBorderPainted(false);
-        result.setContentAreaFilled(false);
-        result.addActionListener(this);
-        this.add(result);
-
-
         ImageIcon buttonHelp = new ImageIcon("src/pliki/pomoc.png");
         help = new JButton("", buttonHelp);
-        help.setBounds(668, 573, 250, 180);
+        help.setBounds(525, 575, 250, 180);
         help.setBackground(Color.WHITE);
         help.setOpaque(false);
         help.setBorderPainted(false);
@@ -78,7 +59,7 @@ public class MainFrame extends JFrame implements ActionListener {
 
         ImageIcon buttonExit = new ImageIcon("src/pliki/wyjscie.png");
         exit = new JButton("", buttonExit);
-        exit.setBounds(974, 573, 250, 180);
+        exit.setBounds(850, 573, 250, 180);
         exit.setBackground(Color.WHITE);
         exit.setOpaque(false);
         exit.setBorderPainted(false);
@@ -100,15 +81,6 @@ public class MainFrame extends JFrame implements ActionListener {
             help.setAlwaysOnTop(true);
             help.setVisible(true);
             help.setBounds(x, y, 1280, 1024);
-            this.dispose();
-        }
-        else if(e.getSource() == result) {
-
-            ResultsFrame results = new ResultsFrame();
-            results.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            results.setAlwaysOnTop(true);
-            results.setVisible(true);
-            results.setBounds(x, y, 1280, 1024);
             this.dispose();
 
         }else if(e.getSource() == play){

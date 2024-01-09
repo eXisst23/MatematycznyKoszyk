@@ -2,7 +2,7 @@ public class WarunekPodzielnosciPrzezDziewiec extends Warunek {
 
     public WarunekPodzielnosciPrzezDziewiec(GamePanel gamePanel) {
         super(gamePanel);
-        nazwa = "Liczba parzysta";
+        nazwa = "Liczba podzielna przez 9";
     }
 
     @Override

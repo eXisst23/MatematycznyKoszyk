@@ -14,9 +14,9 @@ public class Koszyk extends ObiektGry {
 
     public Koszyk(GamePanel gp, KeyHandler keyH) {
 
-        super(new Pozycja(440, 815), new Rozmiar(80, 80), gp);
+        super(new Pozycja(440, 815), new Rozmiar(80, 120), gp);
         this.keyH = keyH;
-        this.speed = 8;
+        this.speed = 10;
         this.pauza = false;
         getPlayerImage();
     }

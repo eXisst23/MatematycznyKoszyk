@@ -29,8 +29,8 @@ public class GamePanel extends JPanel implements Runnable{
     private Font font;
     int punkty;
     int zycia;
-
     int iterator;
+    boolean menu = false;
 
 
     public GamePanel(GameFrame gameFrame){
@@ -54,7 +54,7 @@ public class GamePanel extends JPanel implements Runnable{
         this.aktywnyWarunek = warunki.getFirst();
         this.punkty = 0;
         this.iterator = 0;
-        this.zycia = 2;
+        this.zycia = 3;
         this.font = new Font ("Courier New", 1, 32);
     }
 
@@ -67,7 +67,7 @@ public class GamePanel extends JPanel implements Runnable{
     public void run() {
         double drawInterval = 1000000000/FPS;
         double nextDrawTime = System.nanoTime() + drawInterval;
-        while(gameThread != null){
+        while(gameThread != null && !menu){
 
             input();
 
@@ -117,10 +117,21 @@ public class GamePanel extends JPanel implements Runnable{
 
     public void input() {
         if (keyH.pausePressed) {
+
             koszyk.pauza = true;
         }
         else if (keyH.wznowPressed) {
             koszyk.pauza = false;
+        }
+        else if (keyH.menu){
+            this.menu = true;
+            koszyk.pauza = true;
+            MainFrame main = new MainFrame();
+            main.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            main.setAlwaysOnTop(true);
+            main.setVisible(true);
+            main.setBounds(0, 0, 1280, 1024);
+            this.gameFrame.dispose();
         }
     }
 
@@ -138,7 +149,6 @@ public class GamePanel extends JPanel implements Runnable{
         koszyk.draw(g2);
         ziemia.draw(g2);
 
-        //przyciski
 
         aktywnyWarunek.draw(g2);
         drawScoreAndLifes(g2);

@@ -11,7 +11,7 @@ public class Liczba extends ObiektGry {
         super(pozycja, gp);
         this.wartosc = wartosc;
         this.czyZebrana = false;
-        this.font = new Font ("Courier New", 1, 20);
+        this.font = new Font ("Courier New", Font.BOLD, 20);
         setRozmiar(new Rozmiar(50, 50));
     }
 

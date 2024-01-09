@@ -11,8 +11,12 @@ public class KeyHandler implements KeyListener {
 
     public boolean wznowPressed;
 
+    public boolean menu;
+
     @Override
     public void keyTyped(KeyEvent e) {
+
+
 
     }
 
@@ -36,6 +40,7 @@ public class KeyHandler implements KeyListener {
         if (code == KeyEvent.VK_O) {
             wznowPressed = true;
         }
+
     }
 
     @Override
@@ -57,6 +62,11 @@ public class KeyHandler implements KeyListener {
 
         if (code == KeyEvent.VK_O) {
             wznowPressed = false;
+        }
+
+        if (code == KeyEvent.VK_I) {
+            menu = true;
+            System.out.println("dupa");
         }
 
     }

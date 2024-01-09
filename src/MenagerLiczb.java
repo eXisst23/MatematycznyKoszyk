@@ -23,7 +23,7 @@ public abstract class MenagerLiczb {
     }
 
     private void stworzLiczbe() {
-        liczby.add(new Liczba(new Pozycja(pozycjaStartowa.getX(), pozycjaStartowa.getY()), gp, rand.nextInt(1000)));
+        liczby.add(new Liczba(new Pozycja(pozycjaStartowa.getX(), pozycjaStartowa.getY()), gp, rand.nextInt(1,100)));
     }
 
     public abstract void update();
@@ -36,7 +36,7 @@ public abstract class MenagerLiczb {
 
     public void generujLiczbe() {
         this.licznik ++;
-        if ((rand.nextInt(10000) <= 25) && licznik > 200) {
+        if ((rand.nextInt(3000) <= 25) && licznik > 200) {
             this.licznik = 0;
             stworzLiczbe();
         }

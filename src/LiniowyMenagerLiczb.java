@@ -6,7 +6,7 @@ public class LiniowyMenagerLiczb extends MenagerLiczb {
     @Override
     public void update() {
         for (Liczba liczba : liczby) {
-            liczba.getPozycja().setY(liczba.getPozycja().getY() + 1);
+            liczba.getPozycja().setY(liczba.getPozycja().getY() + (3/2));
         }
     }
 }
