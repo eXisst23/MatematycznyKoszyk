@@ -3,17 +3,12 @@ import java.awt.*;
 public abstract class Warunek {
 
     protected String nazwa;
-
     private Font font;
     private GamePanel gamePanel;
 
     public Warunek(GamePanel gamePanel) {
         this.gamePanel = gamePanel;
         this.font = new Font ("Courier New", 1, 32);
-    }
-
-    public String getNazwa() {
-        return nazwa;
     }
 
     public abstract Boolean czySpelniony(int liczba);
